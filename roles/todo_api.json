@@ -1,0 +1,23 @@
+{
+  "name": "todo_api",
+  "description": "Role for Todo API",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "java": {
+      "install_flavor": "oracle",
+      "jdk_version": 8,
+      "oracle": {
+        "accept_oracle_download_terms": true
+      }
+    }
+  },
+  "override_attributes": {},
+  "chef_type": "role",
+  "run_list": [],
+  "env_run_lists": {
+    "development": [
+      "recipe[java]",
+      "recipe[todo_api_cookbook::default]"
+    ]
+  }
+}
