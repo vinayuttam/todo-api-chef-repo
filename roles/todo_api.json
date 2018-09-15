@@ -9,6 +9,11 @@
       "oracle": {
         "accept_oracle_download_terms": true
       }
+    },
+    "todo_api": {
+      "tomcat": {
+        "version": "9.0.1"
+      }
     }
   },
   "override_attributes": {},
