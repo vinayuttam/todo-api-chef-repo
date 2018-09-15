@@ -14,6 +14,13 @@ cerner_tomcat 'todo_api' do
     cookbook_file 'WEB-INF/classes/database.properties' do
       source 'test/testFile'
     end
+    
+    template 'WEB-INF/classes/database.properties' do
+      source 'test_file.erb'
+      variables(
+        'test_variable' => 'test_variable'
+      )
+    end
   end
 
   # web_app 'todos-api' do
