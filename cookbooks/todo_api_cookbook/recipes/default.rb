@@ -4,24 +4,24 @@
 #
 # Copyright:: 2018, The Authors, All Rights Reserved.
 
-cerner_tomcat 'todo_api' do
+cerner_tomcat "#{node['todo_api']['app']['name']}" do
   install_java false
   version node['todo_api']['tomcat']['version']
 
-  web_app 'ROOT' do
-    source 'https://s3.ap-south-1.amazonaws.com/todos-api/todos-api.war'
+  # web_app 'ROOT' do
+  #   source 'https://s3.ap-south-1.amazonaws.com/todos-api/todos-api.war'
 
-    cookbook_file 'WEB-INF/classes/database.properties' do
-      source 'test/testFile'
-    end
+  #   cookbook_file 'WEB-INF/classes/database.properties' do
+  #     source 'test/testFile'
+  #   end
     
-    template 'WEB-INF/classes/database.properties' do
-      source 'test_file.erb'
-      variables(
-        'test_variable' => 'test_variable'
-      )
-    end
-  end
+  #   template 'WEB-INF/classes/database.properties' do
+  #     source 'test_file.erb'
+  #     variables(
+  #       'test_variable' => 'test_variable'
+  #     )
+  #   end
+  # end
 
   # web_app 'todos-api' do
   #   source 'https://s3.ap-south-1.amazonaws.com/todos-api/todos-api.war'

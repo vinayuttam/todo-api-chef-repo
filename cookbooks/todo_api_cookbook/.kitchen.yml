@@ -24,6 +24,9 @@ suites:
       inspec_tests:
         - test/integration/default
     attributes: {
+      "app": {
+        "name": "todo_api",
+      },
       "java": {
         "install_flavor": "oracle",
         "jdk_version": 8,
