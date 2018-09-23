@@ -3,9 +3,6 @@
   "description": "Role for Todo API",
   "json_class": "Chef::Role",
   "default_attributes": {
-    "app": {
-      "name": "todo_api",
-    },
     "java": {
       "install_flavor": "oracle",
       "jdk_version": 8,
@@ -14,6 +11,9 @@
       }
     },
     "todo_api": {
+      "app": {
+        "name": "todo_api"
+      },
       "tomcat": {
         "version": "9.0.1"
       }
