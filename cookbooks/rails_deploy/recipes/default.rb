@@ -16,6 +16,6 @@ execute 'Install Ruby' do
   command 'rvm install ruby-2.6.3'
 end
 
-remote_file '/home/ubuntu/test.tar.gz' do
-   source "https://one-varsity-dev-artifacts.s3.ap-south-1.amazonaws.com/one_varsity_v1.0.0.tar.gz"
+execute 'Download Artifact' do
+  command 'aws s3 sync s3://one-varsity-dev-artifacts/one_varsity_v1.0.0.tar.gz /home/ubuntu/one_varsity_v1.0.0.tar.gz'
 end
