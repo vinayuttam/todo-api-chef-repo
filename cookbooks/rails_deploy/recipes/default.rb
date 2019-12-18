@@ -6,4 +6,4 @@
 global_version = '2.6.3'
 
 # Install Rbenv Globally
-rbenv_system_install 'system
+rbenv_system_install 'system'
