@@ -14,3 +14,5 @@ run_list 'rails_deploy::default'
 
 # Specify a custom source for a single cookbook:
 cookbook 'rails_deploy', path: '.'
+cookbook 'ruby_rbenv', '~> 2.3.1', :supermarket
+
