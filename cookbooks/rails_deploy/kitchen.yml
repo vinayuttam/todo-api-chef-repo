@@ -16,16 +16,18 @@ provisioner:
   ## see the Chef documentation for more details: https://docs.chef.io/config_yml_kitchen.html
   #  product_name: chef
   #  product_version: 15
+  always_update_cookbooks: true
 
 verifier:
   name: inspec
 
 platforms:
   - name: ubuntu-18.04
-  - name: centos-7
-
+  # - name: centos-7
 suites:
   - name: default
+    run_list:
+      - recipe[rails_deploy::default]
     verifier:
       inspec_tests:
         - test/integration/default
