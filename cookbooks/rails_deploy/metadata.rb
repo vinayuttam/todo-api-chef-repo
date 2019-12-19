@@ -19,4 +19,4 @@ chef_version '>= 14.0'
 #
 # source_url 'https://github.com/<insert_org_here>/rails_deploy'
 depends 'ruby_build', '~> 1.2.0'
-depends 'passenger_apache2', '~> 3.1.0'
+depends 'nginx', '~> 10.0.2'
