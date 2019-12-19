@@ -14,4 +14,5 @@ run_list 'rails_deploy::default'
 
 # Specify a custom source for a single cookbook:
 cookbook 'rails_deploy', path: '.'
-cookbook 'ruby_build', '~> 1.2.0', :supermarket
+cookbook 'ruby_build', '~> 1.2.0'
+cookbook 'passenger_apache2', '~> 3.1.0'
